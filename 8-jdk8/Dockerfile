@@ -1,5 +1,6 @@
 FROM tomcat:8
 
+RUN echo 'deb http://ftp.de.debian.org/debian jessie-backports main' > /etc/apt/sources.list.d/jessie-backports.list
 # Install javac for compilation
 RUN apt-get update \
     && apt-get -q -y install openjdk-8-jdk
